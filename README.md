@@ -1,2 +1,1 @@
-# Sql_Projects
-Sample SQL learning projects
+# telecom-sql-engine
