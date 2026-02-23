@@ -1,0 +1,15 @@
+services:
+  telecom-db:
+    image: postgres:15-alpine
+    container_name: telecom_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secretpassword
+      POSTGRES_DB: telecom_dw
+    ports:
+      - "5433:5432"
+    volumes:
+      - telecom_pgdata:/var/lib/postgresql/data
+
+volumes:
+  telecom_pgdata:
