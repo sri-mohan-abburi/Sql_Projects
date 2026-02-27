@@ -1,5 +1,5 @@
 import psycopg2
-import pandas as pd
+import pandas as pd # load
 
 DB_PARAMS = {
     "dbname": "telecom_dw",
