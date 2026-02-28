@@ -1,0 +1,12 @@
+telecom_pipeline:
+  outputs:
+    dev:
+      type: postgres
+      threads: 4
+      host: localhost
+      port: 5433
+      user: admin
+      pass: secretpassword
+      dbname: telecom_dw
+      schema: public
+  target: dev
