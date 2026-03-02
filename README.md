@@ -13,3 +13,19 @@ Infrastructure: Fully containerized PostgreSQL environment using Docker.
 Transformation: Modular SQL modeling using dbt (Data Build Tool).
 
 Analytics: Revenue leakage detection and monthly usage aggregation.
+
+# Architecture
+Raw Layer: 50,000+ records of customer metadata and usage logs (Data/Calls).
+
+Staging Layer (stg_): Data cleaning, type casting (handling DECIMAL for financial accuracy), and field standardization.
+
+Core Layer (fct_): Production-ready Fact tables aggregating usage by customer and billing cycle.
+
+# Tech Stack
+Database: PostgreSQL 15 (Dockerized)
+
+Transformation: dbt-core
+
+Language: Python 3.x, SQL
+
+Libraries: Pandas, Psycopg2-binary
