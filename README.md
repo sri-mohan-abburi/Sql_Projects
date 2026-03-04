@@ -30,3 +30,7 @@ The engine transforms messy, raw CSV logs into an analytics-ready Star Schema us
 Spin up the isolated PostgreSQL database on port 5433.
 ```bash
 docker-compose up -d
+
+## Results
+
+Will post them tomorrow
