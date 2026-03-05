@@ -27,4 +27,18 @@ JOIN dim_customers_history dim ON temp.customer_id = dim.customer_id
 WHERE dim.is_current = FALSE 
   AND dim.valid_to = CURRENT_TIMESTAMP; -- Only insert for the ones we just expired in Step 1
 
+-- 3. Insert brand new customers who don't exist in the history table yet
+INSERT INTO dim_customers_history (customer_id, plan_type, monthly_fee, status, valid_from, valid_to, is_current)
+SELECT 
+    temp.customer_id,
+    temp.plan_type,
+    temp.monthly_fee,
+    temp.status,
+    CURRENT_TIMESTAMP,
+    '9999-12-31',
+    TRUE
+FROM temp_customer_updates temp
+LEFT JOIN dim_customers_history dim ON temp.customer_id = dim.customer_id
+WHERE dim.customer_id IS NULL;
+
 COMMIT;
