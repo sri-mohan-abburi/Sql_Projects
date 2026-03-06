@@ -1,0 +1,3 @@
+snapshots:
+  telecom_pipeline:
+    +target_schema: snapshots
