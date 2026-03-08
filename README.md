@@ -21,9 +21,9 @@ The engine transforms messy, raw CSV logs into an optimized Star Schema using in
 * **Marts Layer (`mart_`):** Denormalized, wide tables specifically designed for seamless ingestion by BI tools (Tableau, Power BI).
 
 ## Tech Stack
-* **Database:** PostgreSQL 15 (Dockerized)
+* **Database:** PostgreSQL 15
 * **Transformation & Testing:** dbt-core, dbt-postgres
-* **Language:** Python 3.12, Advanced SQL (CTEs, Window Functions)
+* **Language:** Python 3.12, Advanced SQL
 * **Libraries:** Pandas, Psycopg2-binary
 
 ## How to Run Locally
